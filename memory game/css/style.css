@@ -63,6 +63,25 @@ img {
 	margin: 40px 8px 40px 8px;
 }
 
+#button {
+	background-color: #F15B31;
+	font-family: Raleway, serif;
+	text-transform: uppercase;
+	letter-spacing: .08em;
+	font-size: 18px;
+	font-weight: 600;
+	padding: 10px;
+	border-radius: 50px;
+	color: #FFFFFF;
+	display: inline-block;
+}
+
+#button:hover {
+	background-color: #00A6B3;
+	color: #0D2C40;
+	cursor: pointer;
+}
+
 footer {
 	font-family: Raleway, serif;
 	text-transform: uppercase;

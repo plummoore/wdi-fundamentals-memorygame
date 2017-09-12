@@ -23,8 +23,9 @@ var cards = [
 
 var cardsInPlay = [];
 
-var checkForMatch = function (){
 
+//checks the 2 flipped cards to see if matching
+var checkForMatch = function (){
     if (cardsInPlay[0] === cardsInPlay[1]){
     alert("You found a match!");
 } else {
@@ -33,7 +34,7 @@ var checkForMatch = function (){
 };
 
 
-//function to store steps when card is flipped
+//card is clicked and flipped over, front card image is displayed
 var flipCard = function (){
 	var cardId = this.getAttribute('data-id');
 	var card = cards[cardId];
@@ -44,8 +45,11 @@ var flipCard = function (){
 	if (cardsInPlay.length === 2) {
 	checkForMatch();
 	}
-}
+};
 
+
+
+//inital function to create game board
 var createBoard = function (){
 	for (var i = 0; i < cards.length; i++){
 	var cardElement = document.createElement('img');
@@ -57,8 +61,19 @@ var createBoard = function (){
 }
 };
 
+//function to flip back cards for new game (not ideal code!)
+var reset = function() {
+	document.location.reload();
+};
+
+
+//event listen click button, function reset game (not ideal code - see var reset!)
 
 createBoard();
+document.getElementById('button').addEventListener('click', reset);
+
+
+
 
 
 
